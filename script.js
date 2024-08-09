@@ -2,19 +2,17 @@ function clearDisplay() {
   document.getElementById("display").value = "";
 }
 
-function deleteLast() {
+function deleteDigit() {
   let display = document.getElementById("display").value;
   document.getElementById("display").value = display.slice(0, -1);
 }
-
-function appendCharacter(character) {
-  document.getElementById("display").value += character;
+function appendNumber(Number) {
+  document.getElementById("display").value += Number;
 }
-
 function calculate() {
-  let expression = document.getElementById("display").value;
+  let exp = document.getElementById("display").value;
   try {
-    document.getElementById("display").value = eval(expression);
+    document.getElementById("display").value = eval(exp);
   } catch (error) {
     document.getElementById("display").value = "Error";
   }
